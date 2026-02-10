@@ -11,3 +11,17 @@ class BankAccount:
             self.account_number = str(random.randint(10000000, 99999999))
 
         self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Amount deposited: ${amount:.2f} new balance: ${self.balance:.2f}")
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient funds.")
+            self.balance -= 10
+            print("Overdraft fee: $10.00 charged.")
+            print(f"New balance: ${self.balance:.2f}")
+        else:
+            self.balance -= amount
+            print(f"Amount withdrawn: ${amount:.2f} new balance: ${self.balance:.2f}")
