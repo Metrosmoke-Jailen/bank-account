@@ -25,3 +25,18 @@ class BankAccount:
         else:
             self.balance -= amount
             print(f"Amount withdrawn: ${amount:.2f} new balance: ${self.balance:.2f}")
+
+    def get_balance(self):
+        print(f"Current balance: ${self.balance:.2f}")
+        return self.balance
+
+    def add_interest(self):
+        interest = self.balance * 0.00083
+        self.balance += interest
+        print(f"Interest added: ${interest:.2f} new balance: ${self.balance:.2f}")
+
+    def print_statement(self):
+        print(self.full_name)
+        print(f"Account No.: ****{self.account_number[-4:]}")
+        print(f"Balance: ${self.balance:.2f}")
+        print("-" * 30)
