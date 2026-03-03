@@ -1,4 +1,4 @@
-# Bank Account Simulation 🏦
+# Bank Account
 
 This project is a Python program that simulates a basic bank account using object-oriented programming principles.
 
