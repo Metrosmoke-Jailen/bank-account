@@ -11,7 +11,7 @@ class BankAccount:
             self.account_number = str(random.randint(10000000, 99999999))
 
         self.balance = balance
-    
+
     def deposit(self, amount):
         self.balance += amount
         print(f"Amount deposited: ${amount:.2f} new balance: ${self.balance:.2f}")
@@ -40,3 +40,29 @@ class BankAccount:
         print(f"Account No.: ****{self.account_number[-4:]}")
         print(f"Balance: ${self.balance:.2f}")
         print("-" * 30)
+
+
+# =========================
+# Example Usage (REQUIRED)
+# =========================
+
+# Account 1
+mitchell = BankAccount("Mitchell", account_number="03141592")
+
+# Deposit $400,000
+mitchell.deposit(400000)
+
+# Print statement
+mitchell.print_statement()
+
+# Add interest
+mitchell.add_interest()
+
+# Print statement
+mitchell.print_statement()
+
+# Withdraw $150 (Mitchell needs some Yeezy's)
+mitchell.withdraw(150)
+
+# Print statement
+mitchell.print_statement()
