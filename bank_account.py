@@ -41,11 +41,6 @@ class BankAccount:
         print(f"Balance: ${self.balance:.2f}")
         print("-" * 30)
 
-
-# =========================
-# Example Usage (REQUIRED)
-# =========================
-
 # Account 1
 mitchell = BankAccount("Mitchell", account_number="03141592")
 
