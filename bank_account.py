@@ -4,7 +4,6 @@ class BankAccount:
     def __init__(self, full_name, account_number=None, balance=0):
         self.full_name = full_name
 
-        # Allow manual account number OR generate random 8-digit number
         if account_number:
             self.account_number = str(account_number).zfill(8)
         else:
@@ -41,23 +40,10 @@ class BankAccount:
         print(f"Balance: ${self.balance:.2f}")
         print("-" * 30)
 
-# Account 1
 mitchell = BankAccount("Mitchell", account_number="03141592")
-
-# Deposit $400,000
 mitchell.deposit(400000)
-
-# Print statement
 mitchell.print_statement()
-
-# Add interest
 mitchell.add_interest()
-
-# Print statement
 mitchell.print_statement()
-
-# Withdraw $150 (Mitchell needs some Yeezy's)
 mitchell.withdraw(150)
-
-# Print statement
 mitchell.print_statement()
